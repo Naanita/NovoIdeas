@@ -1,0 +1,96 @@
+.chat {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+  margin: 0 auto;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  min-height: 80vh;
+  padding: 10px;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  justify-content: space-between; 
+}
+
+/* Estilos para pantallas más pequeñas que 600px */
+@media only screen and (max-width: 600px) {
+  .chat {
+    width: 90%;
+    min-height: 90vh;
+  }
+}
+
+/* Estilos para pantallas entre 600px y 960px */
+@media only screen and (min-width: 600px) and (max-width: 960px) {
+  .chat {
+    width: 70%;
+    min-height: 80vh;
+  }
+}
+
+/* Estilos para pantallas entre 960px y 1280px */
+@media only screen and (min-width: 960px) and (max-width: 1280px) {
+  .chat {
+    width: 50%;
+    min-height: 70vh;
+  }
+}
+
+/* Estilos para pantallas mayores a 1280px */
+@media only screen and (min-width: 1280px) {
+  .chat {
+    width: 40%;
+    min-height: 60vh;
+  }
+}
+
+.message {
+  background-color: #d5d5d5;
+  border-radius: 10px;
+  padding: 10px;
+  margin-bottom: 10px;
+  align-self: flex-start;
+  max-width: 70%;
+}
+
+.message.client {
+  align-self: flex-end;
+  background-color: #dcf8c6;
+}
+
+.message.user {
+  align-self: flex-start;
+  background-color: #fff;
+}
+
+.chat form {
+  display: flex;
+  justify-content: space-between;
+  margin-top: auto;
+  position: relative;
+  align-self: flex-end; 
+  bottom: 0; 
+  width: 100%; 
+}
+
+.chat input[type="text"] {
+  flex: 1;
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 30px;
+  width: 100%;
+}
+
+.chat button[type="submit"] {
+  background-color: #4caf50;
+  color: #fff;
+  padding: 10px;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  font-size: 1.5rem;
+  cursor: pointer;
+}

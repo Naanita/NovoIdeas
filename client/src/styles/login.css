@@ -1,79 +1,121 @@
+
+:root {
+  --primary-100: #FFFFFF;
+  --primary-200: #e0e0e0;
+  --primary-300: #9b9b9b;
+  --accent-100: #FF3C38;
+  --accent-200: #ffdfc2;
+  --text-100: #CCCCCC;
+  --text-200: #aeaeae;
+  --bg-100: #0F1626;
+  --bg-200: #1e2436;
+  --bg-300: #363c4e;
+}
+
+
+body {
+  margin: 0;
+  font-family: sans-serif;
+  background-color: var(--bg-100);
+}
+
 .page-login {
-    background-color: #c00;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.login {
+  background-color: var(--primary-100);
+  width: 90%;
+  max-width: 400px;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.info {
+  text-align: center;
+}
+
+.logo {
+  width: 100%;
+  max-width: 264px;
+  height: 250px;
+  background: transparent url(.././assets/nasa-6.svg) 0% 0% no-repeat padding-box;
+  opacity: 1;
+  z-index: 1;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+.page-login h3 {
+  margin-top: 0;
+  color: var(--bg-100);
+}
+
+.form {
+  margin-top: 20px;
+}
+
+.input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: none;
+  border-bottom: 2px solid var(--primary-300);
+  background-color: var(--primary-200);
+  color: var(--text-200);
+}
+
+.btn {
+  width: 100%;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: var(--accent-100);
+  color: var(--primary-100);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.btn:hover {
+  background-color: var(--accent-200);
+}
+
+.btn:disabled {
+  background-color: var(--primary-300);
+  color: var(--text-100);
+  cursor: not-allowed;
+}
+
+.forgot-password {
+  color: var(--accent-100);
+  font-size: 0.9rem;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.forgot-password:hover {
+  color: var(--accent-200);
+}
+
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .table-container {
+    max-width: 90%;
+    margin: 0 auto;
   }
-  
-  .login {
-    background-color: #fff;
-    width: 300px;
-    padding: 20px;
-    border-radius: 10px;
+}
+
+
+@media (max-width: 576px) {
+  .table-container {
+    max-width: 100%;
+    overflow-x: scroll;
   }
-  
-  .info {
-    text-align: center;
-  }
-  
-  .logo {
-    width: 264px;
-    height: 84px;
-    background: transparent url(.././assets/coca-cola-2021.svg) 0% 0% no-repeat padding-box;
-    opacity: 1;
-    z-index: 1;
-    cursor: pointer;
-  }
-  
-  h3 {
-    margin-top: 10px;
-    color: rgb(0, 0, 0);
-  }
-  
-  .form {
-    margin-top: 20px;
-  }
-  
-  .input {
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: none;
-    border-bottom: 1px solid #c00;
-    background-color: #f8f8f8;
-    color: #000;
-  }
-  
-  .btn {
-    width: 100%;
-    padding: 10px;
-    margin-top: 20px;
-    background-color: #c00;
-    color: #fff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.2s;
-  }
-  
-  .btn:hover {
-    background-color: #a00;
-  }
-  
-  .btn:disabled {
-    background-color: #ccc;
-    cursor: not-allowed;
-  }
-  
-  .forgot-password {
-    color: #c00;
-    font-size: 0.9rem;
-    text-decoration: none;
-    transition: color 0.2s;
-  }
-  
-  .forgot-password:hover {
-    color: #a00;
-  }
-  
+}
